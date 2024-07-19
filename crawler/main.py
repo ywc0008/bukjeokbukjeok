@@ -15,14 +15,14 @@ def get_sibling_text(soup, label):
 def parse_job_details(soup):
     # BeautifulSoup을 사용하여 필요한 정보를 추출
     details = {
-        "업종": get_sibling_text(soup, '업 종'),
-        "상호": get_sibling_text(soup, '상 호'),
-        "구인주소": get_sibling_text(soup, '주 소'),
-        "모집기간":  get_sibling_text(soup, '모 집 기 간'),
-        "모집인원": get_sibling_text(soup, '모 집 인 원'),
-        "근무시간": get_sibling_text(soup, '근 무 시 간'),
-        "급여": get_sibling_text(soup, '급 여'),
-        "채용담당": get_sibling_text(soup, '채 용 담 당')
+        "industry": get_sibling_text(soup, '업 종'),
+        "title": get_sibling_text(soup, '상 호'),
+        "location": get_sibling_text(soup, '주 소'),
+        "recruitmentPeriod":  get_sibling_text(soup, '모 집 기 간'),
+        "numberOfPositions": get_sibling_text(soup, '모 집 인 원'),
+        "workingHours": get_sibling_text(soup, '근 무 시 간'),
+        "salary": get_sibling_text(soup, '급 여'),
+        "contactPerson": get_sibling_text(soup, '채 용 담 당')
         
     }
     return details

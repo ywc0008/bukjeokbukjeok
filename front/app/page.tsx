@@ -1,9 +1,9 @@
 "use client";
 
-import NaverMap from "@/components/NaverMap";
 import useSWR from "swr";
+import NaverMap from "@/components/NaverMap";
 
-const fetcher = (url) => fetch(url).then((res) => res.json());
+const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 export default function Home() {
   const { data, error, isLoading } = useSWR(
@@ -18,11 +18,11 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <h1>Job Listings</h1>
       <ul>
-        {data.map((job, index) => (
+        {data.map((job, index: number) => (
           <li key={index}>{job.title}</li>
         ))}
       </ul>
-      <NaverMap />
+      <NaverMap data={data} />
     </main>
   );
 }

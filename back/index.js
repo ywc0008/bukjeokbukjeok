@@ -19,5 +19,5 @@ app.get("/api/jobs", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`서버 작동 http:localhost:${PORT}`);
+  console.log(`서버 작동 http:www.localhost:${PORT}`);
 });

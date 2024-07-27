@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-const NaverMap = () => {
+const NaverMap = ({ data }) => {
   useEffect(() => {
     const script = document.createElement("script");
     script.src = `https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=dri8g9rbla`;
@@ -11,7 +11,7 @@ const NaverMap = () => {
         zoom: 16,
         zoomControl: true,
         zoomControlOptions: {
-          style: naver.maps.ZoomControlStyle.LARGE, // 컨트롤 스타일 설정
+          style: naver.maps.ZoomControlStyle.SMALL, // 컨트롤 스타일 설정
           position: naver.maps.Position.TOP_RIGHT, // 컨트롤 위치 설정
         },
       });

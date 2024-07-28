@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-const NaverMap = ({ data }) => {
+const NaverMap = ({ industry, title }) => {
   useEffect(() => {
     const script = document.createElement("script");
     script.src = `https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=dri8g9rbla`;
@@ -23,7 +23,7 @@ const NaverMap = ({ data }) => {
             35.84399311677954,
             127.12738407982567
           ),
-          title: "Marker 1",
+          title: "마커1",
         },
         {
           position: new naver.maps.LatLng(37.3625704, 127.105399),
@@ -38,10 +38,10 @@ const NaverMap = ({ data }) => {
       // 인포윈도우 생성
       const infoWindow = new naver.maps.InfoWindow({
         content: "", // 빈 내용으로 초기화
-        maxWidth: 200,
+        maxWidth: 500,
         backgroundColor: "#fff",
         borderColor: "",
-        borderWidth: 2,
+        borderWidth: 1,
         anchorSize: new naver.maps.Size(10, 10),
         anchorSkew: true,
         anchorColor: "#fff",
@@ -53,11 +53,12 @@ const NaverMap = ({ data }) => {
           position: data.position,
           map: map,
           title: data.title,
+          location: data.location,
         });
 
         // 마커에 클릭 이벤트 추가
         naver.maps.Event.addListener(marker, "click", () => {
-          const content = `<div class="w-44 h-44  text-black">${data.title}</div>`;
+          const content = `<div class="w-44 h-44  text-black">${data.title}${data.location}</div>`;
           infoWindow.setContent(content);
           infoWindow.open(map, marker);
         });

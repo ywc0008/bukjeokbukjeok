@@ -10,13 +10,16 @@ export default function Home() {
     "http://localhost:3003/api/jobs",
     fetcher
   );
+  if (data && Array.isArray(data)) {
+    console.log(data[0]);
+  }
 
   if (error) return <div>Failed to load jobs</div>;
   if (isLoading) return <div>Loading...</div>;
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Job Listings</h1>
+      <h1>구인구직 목록</h1>
       <ul>
         {data.map((job, index: number) => (
           <li key={index}>{job.title}</li>

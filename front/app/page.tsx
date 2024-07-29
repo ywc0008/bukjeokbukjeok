@@ -19,7 +19,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>구인구직 목록</h1>
+      <h1>북적북적</h1>
       <ul>
         {data.map((job, index: number) => (
           <li key={index}>{job.title}</li>

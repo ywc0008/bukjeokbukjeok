@@ -34,6 +34,16 @@ const NaverMap = ({ industry, title }) => {
           title: "Marker 3",
         },
       ];
+      // const makersdata = data.map((data) => {
+      //   industry: data.industry,
+      //   title: data.title,
+      //   location: data.location,
+      //   recruitmentPeriod: data.recruitmentPeriod,
+      //   numberOfPositions: data.numberOfPositions,
+      //   workingHours: data.workingHours,
+      //   salar: data.salar,
+      //   contactPerson: data.contactPerson
+      // });
 
       // 인포윈도우 생성
       const infoWindow = new naver.maps.InfoWindow({

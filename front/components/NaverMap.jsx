@@ -27,11 +27,11 @@ const NaverMap = ({ industry, title }) => {
         },
         {
           position: new naver.maps.LatLng(37.3625704, 127.105399),
-          title: "Marker 2",
+          title: "마커 2",
         },
         {
           position: new naver.maps.LatLng(37.3655704, 127.105399),
-          title: "Marker 3",
+          title: "마커 3",
         },
       ];
       // const makersdata = data.map((data) => {

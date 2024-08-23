@@ -23,12 +23,8 @@ export default function Home() {
         <h1>북적북적</h1>
         <h2>전북대 구인구직 지도맵</h2>
       </div>
-      {/* <ul>
-        {data.map((job, index: number) => (
-          <li key={index}>{job.title}</li>
-        ))}
-      </ul> */}
-      <NaverMap data={data} />
+
+      {/* <NaverMap data={data} /> */}
     </main>
   );
 }

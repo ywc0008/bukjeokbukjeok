@@ -7,7 +7,7 @@ export default function KaKaoMap() {
 
   useEffect(() => {
     const script = document.createElement("script");
-    script.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=185add19555f56555e052ad5baff2786&autoload=false`;
+    script.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.KAKAO_API_KEY}&autoload=false`;
     script.onload = () => {
       window.kakao.maps.load(() => {
         setIsMapLoaded(true);
@@ -17,12 +17,13 @@ export default function KaKaoMap() {
   }, []);
 
   if (!isMapLoaded) return <div>지도를 불러오는 중...</div>;
+
   return (
     <>
       <Head>
         <script
           type="text/javascript"
-          src={`//dapi.kakao.com/v2/maps/sdk.js?appkey=185add19555f56555e052ad5baff2786&libraries=services,clusterer&autoload=false`}
+          src={`//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.KAKAO_API_KEY}&libraries=services,clusterer&autoload=false`}
         ></script>
       </Head>
       <Map

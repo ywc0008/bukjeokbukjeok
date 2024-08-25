@@ -44,7 +44,7 @@ def save_jobs_to_file(jobs, filename='jobs.json'):
 
 if __name__ == '__main__':
     base_url = 'https://www.jbnu.ac.kr/kor/?menuID=425&mode=view&no='
-    start_no = 84132  # 최신 게시글 번호
+    start_no = 85001  # 최신 게시글 번호
     num_jobs_to_crawl = 200
     jobs = []
 
